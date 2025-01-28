@@ -23,7 +23,7 @@ src/
 │   │   ├── Card.test.tsx
 │   │   └── index.ts
 │   ├── ...
-│   └── shared/          # Reusable UI components specific to this project.
+│   └── reuseables/          # Reusable UI components specific to this project.
 │       ├── AddToCartButton/
 │       │   ├── AddToCartButton.tsx
 │       │   ├── AddToCartButton.test.tsx
