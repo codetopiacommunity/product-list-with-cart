@@ -1,0 +1,1 @@
+// Defines TypeScript types specific to the cart feature.
