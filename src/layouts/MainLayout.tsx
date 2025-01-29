@@ -2,6 +2,6 @@ import React from 'react'
 
 export const MainLayout = () => {
   return (
-    <div>MainLayout</div>
+    <div className='text-2xl'>MainLayout</div>
   )
 }
