@@ -30,6 +30,8 @@ This application is a product-list-cart built using React and TypeScript. It all
 1.  **Clone the repository:**
     ```bash
     git clone [git@github.com:codetopiacommunity/product-list-with-cart.git]
+    ```
+    ```bash
     cd [product-list-with-cart]
     ```
 2.  **Install dependencies:**
