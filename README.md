@@ -4,100 +4,6 @@
 
 This application is a product-list-cart built using React and TypeScript. It allows users to browse a selection of desserts, add them to a cart, and view their order summary. The project is structured for scalability, maintainability, and testability, reflecting enterprise-level development practices.
 
-## Project Structure
-
-The project's folder structure is designed to promote feature-based organization and separation of concerns.
-
-```
-src/
-├── assets/            # Static assets like images, fonts, svgs
-│   ├── images/
-│   └── fonts/
-├── components/       # Reusable UI components (button, card, modal, etc)
-│   ├── Button/
-│   │   ├── Button.tsx
-│   │   ├── Button.test.tsx
-│   │   └── index.ts
-│   ├── Card/
-│   │   ├── Card.tsx
-│   │   ├── Card.test.tsx
-│   │   └── index.ts
-│   ├── ...
-│   └── reuseables/          # Reusable UI components specific to this project.
-│       ├── AddToCartButton/
-│       │   ├── AddToCartButton.tsx
-│       │   ├── AddToCartButton.test.tsx
-│       │   └── index.ts
-│       ├── PriceLabel/
-│       │   ├── PriceLabel.tsx
-│       │   ├── PriceLabel.test.tsx
-│       │   └── index.ts
-│       └── index.ts
-├── contexts/          # React contexts for state management
-│   └── CartContext.tsx
-│   └── index.ts
-├── features/        # Feature-specific code (desserts, cart, etc.)
-│   ├── desserts/       # Specific to the desserts listing
-│   │   ├── components/ # Components specific to the feature
-│   │   │   ├── DessertCard/
-│   │   │   │   ├── DessertCard.tsx
-│   │   │   │   ├── DessertCard.test.tsx
-│   │   │   │   └── index.ts
-│   │   │   └── index.ts
-│   │   ├── hooks/      # Hooks specific to this feature
-│   │   │   └── useDessertData.ts
-│   │   ├── types.ts
-│   │   ├── constants.ts # Constants
-│   │   └── index.ts
-│   └── cart/          # Specific to the cart functionality
-│       ├── components/ # Component specific to cart
-│       │   ├── CartItem/
-│       │   │   ├── CartItem.tsx
-│       │   │   ├── CartItem.test.tsx
-│       │   │   └── index.ts
-│       │   ├── CartSummary/
-│       │   │   ├── CartSummary.tsx
-│       │   │   ├── CartSummary.test.tsx
-│       │   │   └── index.ts
-│       │   └── index.ts
-│       ├── hooks/      # Hooks specific to this feature
-│       │   └── useCart.ts
-│       ├── types.ts
-│       ├── utils.ts
-│       └── index.ts
-├── hooks/           # Global reusable hooks
-│   └── ..
-├── layouts/         # Layout components for overall page structure
-│   └── MainLayout.tsx
-├── pages/           # Top-level pages for routes
-│   └── HomePage/
-│       ├── HomePage.tsx
-│       └── index.ts
-├── styles/          # Global styles, themes, and CSS modules
-│   ├── ...
-├── types/           # Global types for the application
-│   └── index.ts
-├── utils/           # Utility functions
-│   └── ...
-├── App.tsx
-├── index.tsx
-└── main.tsx
-```
-
-### Folder Descriptions
-
-*   **`assets/`**: Contains static files such as images, fonts, and icons.
-*   **`components/`**: Holds reusable UI elements across the application. Organized into component folders containing Component.tsx, Component.test.tsx and `index.ts` to export the component for easy access.
-    *   **`shared/`**: Stores UI components that are specific to this project.
-*   **`contexts/`**: Manages global states using React Context API.
-*   **`features/`**: Contains directories for specific features such as `desserts` and `cart`. Each feature has its own `components/` and `hooks/`, `types.ts`, `constants.ts` and `index.ts` which exports everything from the feature directory.
-*   **`hooks/`**: Stores globally reusable React hooks that can be used across different features
-*   **`layouts/`**: Contains layout components which are designed to manage the general structure of the app.
-*   **`pages/`**:  Each top-level directory for each page of the application.
-*   **`styles/`**: Global styles and themes for the application.
-*   **`types/`**: Contains global type declarations used in the project.
-*   **`utils/`**: Contains utility functions used by different parts of the project.
-
 ## Technologies & Tools
 
 ### Languages
@@ -107,11 +13,9 @@ src/
 ### Frameworks/Libraries
 
 *   **React:**  Used for building the UI.
-*   **[other libraries used]**: [for styling (Tailwind CSS) testing (Jest, React Testing Library)]
-*  **Vite**: used as a bundler.
+*   **Tailwind**: for styling 
 
 ### Testing
-
 *   **Jest:** JavaScript testing framework
 *   **React Testing Library:**  For testing React components, focusing on user interactions rather than implementation details.
 
@@ -160,7 +64,3 @@ To contribute to this project, please follow these steps:
 * Any function which are used by many components and does not have side effect should be placed in the utils folder.
 * Every type should be placed in its respective folder and must be exported using `index.ts`.
 * When working with APIs use services and make sure to handle loading states and errors.
-
-## License
-
-[MIT License]
